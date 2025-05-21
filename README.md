@@ -42,8 +42,7 @@ La mia missione è creare esperienze digitali che uniscano estetica e funzionali
 
 ## 📫 Contattami
 
-Sono sempre aperto a nuove collaborazioni, idee e progetti stimolanti!  
-📧 **Email**: [Inserisci la tua email]  
+Sono sempre aperto a nuove collaborazioni, idee e progetti stimolanti!    
 🌐 **Portfolio**: [simonegiannecchini.github.io](https://simonegiannecchini.github.io/Simone.github.io/)
 
 ---
