@@ -1,82 +1,67 @@
-# Simone Giannecchini 👨‍💻
+# 👋 Ciao, sono Simone Giannecchini
 
-Ciao, sono **Simone Giannecchini** — front-end developer e web designer con una forte passione per la tecnologia e lo sviluppo di interfacce moderne.
+💻 **Front-End Developer | Web Designer | AI Enthusiast**
 
-Il mio percorso nasce molti anni fa con il leggendario **Commodore 64**: da lì è iniziata una curiosità che oggi si traduce nello sviluppo di applicazioni web dinamiche, performanti e orientate all’utente.
-
-Lavoro con tecnologie come **Vue.js** e **Angular**, creando esperienze digitali scalabili, intuitive e curate nei dettagli.
+Costruisco esperienze digitali moderne, performanti e orientate all’utente, combinando sviluppo front-end avanzato e nuove tecnologie come l’Intelligenza Artificiale.
 
 ---
 
-## 🚀 Cosa faccio
+## 🚀 Tech Stack
 
-Sviluppo interfacce web moderne trasformando idee in prodotti concreti, combinando:
+### 💻 Front-End
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 
-- Design pulito e funzionale  
-- Sviluppo front-end avanzato  
-- Framework moderni (Vue & Angular)  
+### ⚙️ Framework
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D)
 
-Il mio obiettivo è costruire prodotti che siano non solo belli, ma anche veloci, accessibili e facili da usare.
+### 🤖 AI
+![AI](https://img.shields.io/badge/AI-Prompt%20Engineering-00C853?style=for-the-badge)
+
+---
+
+## 🧠 Chi sono
+
+Sono uno sviluppatore front-end con una forte passione per la tecnologia.  
+Il mio percorso parte dal **Commodore 64** e arriva oggi allo sviluppo di applicazioni web moderne e intelligenti.
+
+🔹 Creo interfacce intuitive e performanti  
+🔹 Utilizzo framework moderni per applicazioni scalabili  
+🔹 Integro AI per migliorare l’esperienza utente  
 
 ---
 
 ## 🔥 Il mio approccio
 
-- **Passione per la tecnologia**  
-  Studio e sperimento continuamente nuove soluzioni per migliorare performance ed esperienza utente.
-
-- **Metodo e precisione**  
-  Ogni progetto è sviluppato con attenzione al dettaglio, dal codice alla UI.
-
-- **Flessibilità tecnologica**  
-  Scelgo lo strumento giusto in base al progetto:  
-  - Vue → per soluzioni snelle e veloci  
-  - Angular → per applicazioni strutturate e scalabili  
-
----
-
-## 🧠 Competenze
-
-### 💻 Tecniche
-- HTML5 & CSS3 → layout responsive, accessibilità e performance  
-- JavaScript moderno (ES6+)  
-- Vue.js → SPA leggere, componenti riusabili  
-- Angular → architetture strutturate e applicazioni complesse  
-- Front-End Development → UI moderne e user-friendly  
-
-### 🤝 Soft Skills
-- Problem solving e pensiero analitico  
-- Organizzazione e gestione del tempo  
-- Comunicazione efficace  
-- Apprendimento continuo  
+✔️ Codice pulito e manutenibile  
+✔️ Attenzione ai dettagli e alla UX  
+✔️ Apprendimento continuo  
 
 ---
 
 ## 🌍 Progetti
 
-### 🌐 Portfolio personale
+🌐 **Portfolio:**  
 👉 https://simonegiannecchini.github.io/
-
-### 📂 GitHub
-👉 https://github.com/
 
 ---
 
-## 🎯 Obiettivo
+## 📊 GitHub Stats
 
-Realizzare esperienze digitali che uniscano tecnologia e design, creando prodotti affidabili, scalabili e pensati per le persone.
+![Simone's GitHub stats](https://github-readme-stats.vercel.app/api?username=SimoneGiannecchini&show_icons=true&theme=tokyonight)
 
-Ogni progetto è un’occasione per migliorare, sperimentare e costruire qualcosa di concreto.
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=SimoneGiannecchini&layout=compact&theme=tokyonight)
 
 ---
 
 ## 📫 Contatti
 
-Sono sempre aperto a nuove collaborazioni, idee e progetti stimolanti.
-
-🌐 Portfolio  
-👉 https://simonegiannecchini.github.io/
+🌐 Portfolio → https://simonegiannecchini.github.io/
 
 ---
 
-💡 _"Sviluppare non significa solo scrivere codice, ma costruire esperienze che funzionano davvero."_
+💡 *"Sviluppare non significa solo scrivere codice, ma creare esperienze che funzionano davvero."*
