@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -345,8 +345,8 @@ label {
 
 .intro-grid {
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 2rem;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.45fr);
+  gap: 2.25rem;
   align-items: start;
 }
 
@@ -356,8 +356,8 @@ label {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 1.25rem;
 }
 
 .feature-card,
@@ -365,7 +365,7 @@ label {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 24px;
-  padding: 1.5rem;
+  padding: 1.75rem;
   box-shadow: 0 18px 32px rgba(0, 0, 0, 0.18);
 }
 
@@ -381,6 +381,22 @@ label {
 .highlight-body p {
   padding-left: 0;
   max-width: none;
+  text-align: left;
+  text-wrap: pretty;
+}
+
+.feature-card p {
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+@media (min-width: 1100px) {
+  .intro-copy {
+    padding-right: 1rem;
+  }
+  .feature-card {
+    min-height: 100%;
+  }
 }
 
 .feature-tag,
@@ -503,80 +519,206 @@ button:hover {
   width: 100%;
   box-sizing: border-box;
   margin: 0 auto;
-  float: left;
+  max-width: 860px;
 }
 
 #modulo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   border-bottom: solid 1px;
-  padding: 15px;
+  padding: 108px 15px 48px;
   border-top: #212121;
-  color: #212121;
-  margin-top: 20px;
-  height: 90vh;
+  color: #ffffff;
+  margin-top: 0;
+  min-height: calc(100vh - 72px);
+  height: auto;
+  background: radial-gradient(circle at top left, rgba(245, 245, 10, 0.14), transparent 24%), linear-gradient(145deg, #080808 0%, #111111 48%, #191919 100%);
 }
 
-ul {
+#modulo .content {
+  width: min(100%, 1080px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#modulo h1,
+#modulo h3,
+#modulo .contact-intro {
+  text-align: center;
+  color: #ffffff;
+}
+
+#modulo h1 {
+  margin: 0 0 0.55rem;
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  line-height: 1.05;
+}
+
+#modulo h3 {
+  max-width: 640px;
+  margin: 0 auto 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1.15rem, 2vw, 1.75rem);
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+.contact-intro {
+  max-width: 620px;
+  margin: 0 auto 2.2rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.contact-form {
+  width: min(100%, 1060px);
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid rgba(245, 245, 10, 0.18);
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(27, 27, 27, 0.96) 0%, rgba(15, 15, 15, 0.94) 100%);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.contact-form-grid {
   list-style: none;
   padding: 0;
   margin: 0;
-  width: 100%;
-  max-width: 500px;
-}
-ul li {
-  padding: 10px 0;
-  width: 100%;
-  box-sizing: border-box;
-}
-ul li label {
-  display: block;
-  padding-bottom: 8px;
-  width: 100%;
-}
-ul li input {
-  border: solid 2px #212121;
-  background: white;
-  width: 100%;
-  box-sizing: border-box;
-}
-ul li input.testo {
-  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
 }
 
-.pulsante {
-  text-transform: uppercase;
-  cursor: pointer;
-  border-radius: 44px;
-  font-weight: bold;
-  background-color: #f5f50a;
-  color: black;
-  height: 40px;
-  width: 50%;
-  border: none;
-  text-align: center;
-  margin-left: 0;
-  transition: background-color 0.3s ease-in-out;
+.contact-field,
+.contact-actions {
+  width: 100%;
+  box-sizing: border-box;
 }
-.pulsante:hover {
-  background-color: #c4c408;
+
+.subject,
+.terzo,
+.contact-actions {
+  grid-column: 1/-1;
 }
-.pulsante:hover {
-  background-color: #212121;
+
+.contact-field label {
+  display: block;
+  margin-bottom: 0.55rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.contact-form .testo {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffffff;
+  font: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.contact-form .testo::placeholder {
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.contact-form .testo:hover {
+  border-color: rgba(245, 245, 10, 0.35);
+}
+
+.contact-form .testo:focus {
+  outline: none;
+  border-color: #f5f50a;
+  box-shadow: 0 0 0 4px rgba(245, 245, 10, 0.2);
+  transform: translateY(-1px);
 }
 
 .terzo #messaggio {
-  width: 100%;
-  max-width: 500px;
-  padding: 10px;
-  box-sizing: border-box;
+  min-height: 170px;
+  resize: vertical;
 }
 
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.4rem;
+}
+
+.quarto button,
 .quarto .pulsante {
-  width: 150px;
-  background: #f5f50a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 170px;
+  min-height: 56px;
+  padding: 0.95rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f5f50a 0%, #f3c94d 100%);
+  color: #111;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(245, 201, 77, 0.32);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.quarto button:hover,
+.quarto .pulsante:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 32px rgba(245, 201, 77, 0.4);
+  filter: brightness(1.02);
+}
+
+.quarto button:disabled,
+.quarto .pulsante:disabled {
+  cursor: wait;
+  opacity: 0.75;
+  transform: none;
+  box-shadow: none;
+}
+
+.form-status {
+  width: min(100%, 1060px);
+  max-width: 1060px;
+  margin: 1rem auto 0;
+  padding: 0.9rem 1rem;
+  border-radius: 16px;
+  text-align: center;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.form-status.is-pending {
+  color: #7a6500;
+  background: rgba(245, 245, 10, 0.18);
+}
+
+.form-status.is-success {
+  color: #e9fff0;
+  background: rgba(46, 125, 50, 0.45);
+  border: 1px solid rgba(141, 245, 166, 0.28);
+}
+
+.form-status.is-error {
+  color: #8a1f1f;
+  background: rgba(255, 143, 143, 0.2);
 }
 
 .flex {
@@ -848,7 +990,7 @@ h1.porfolio {
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-/* Responsività */
+/* ResponsivitÃ  */
 @media (max-width: 900px) {
   .card {
     width: calc(50% - 20px); /* 2 card per riga su tablet */
@@ -863,19 +1005,36 @@ h1.porfolio {
 /***************************************************
                         FOOTER 
 ***************************************************/
+footer {
+  padding: 24px 16px 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
 footer ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 14px 28px;
   margin: 0 auto;
+  padding: 0;
+  list-style: none;
   font-size: 19px;
+  max-width: 960px;
+}
+footer li {
+  margin: 0;
+  padding: 0;
 }
 footer a {
+  display: inline-block;
   text-decoration: none;
   color: #ffffff !important;
+  line-height: 1.4;
 }
 
 .diritti {
   margin: 0 auto;
-  padding: 2px 0;
+  padding: 14px 0 0;
   text-align: center;
 }
 
@@ -885,8 +1044,9 @@ footer ul li a:hover {
 
 @media (max-width: 768px) {
   footer ul {
-    display: block;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     text-align: center;
     margin: 0 auto;
     padding: 10px 0;
@@ -1065,6 +1225,28 @@ footer ul li a:hover {
   }
 }
 @media (max-width: 480px) {
+  .contact-form {
+    padding: 1.2rem;
+    border-radius: 22px;
+  }
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .primo,
+  .secondo,
+  .subject,
+  .terzo,
+  .contact-actions {
+    grid-column: auto;
+  }
+  .contact-actions {
+    justify-content: stretch;
+  }
+  .quarto button,
+  .quarto .pulsante {
+    width: 100%;
+  }
   p {
     font-size: 16px;
     line-height: 1.7;
@@ -1113,3 +1295,4 @@ footer ul li a:hover {
     transform: translateY(-6px) scale(1.01);
   }
 }/*# sourceMappingURL=style.css.map */
+

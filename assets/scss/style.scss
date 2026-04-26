@@ -387,8 +387,8 @@ top: 0;
 
 .intro-grid {
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 2rem;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.45fr);
+  gap: 2.25rem;
   align-items: start;
 }
 
@@ -398,8 +398,8 @@ top: 0;
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 1.25rem;
 }
 
 .feature-card,
@@ -407,7 +407,7 @@ top: 0;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 24px;
-  padding: 1.5rem;
+  padding: 1.75rem;
   box-shadow: 0 18px 32px rgba(0, 0, 0, 0.18);
 }
 
@@ -423,6 +423,23 @@ top: 0;
 .highlight-body p {
   padding-left: 0;
   max-width: none;
+  text-align: left;
+  text-wrap: pretty;
+}
+
+.feature-card p {
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+@media (min-width: 1100px) {
+  .intro-copy {
+    padding-right: 1rem;
+  }
+
+  .feature-card {
+    min-height: 100%;
+  }
 }
 
 .feature-tag,
@@ -536,7 +553,7 @@ button{
     width: 100%;
     box-sizing:border-box;
     margin:0 auto;
-    float: left;
+    max-width: 860px;
 }
 
 
@@ -544,68 +561,201 @@ button{
     display: flex; 
     flex-direction: column; 
     align-items: center; 
-    justify-content: center; 
+    justify-content: flex-start; 
    
     border-bottom: solid 1px;
-    padding: 15px;
+    padding: 108px 15px 48px;
     border-top: $secondary-color;
-    color:$secondary-color;
-    margin-top: 20px;
-    height: 90vh;
+    color: $primary-color;
+    margin-top: 0;
+    min-height: calc(100vh - 72px);
+    height: auto;
+    background:
+      radial-gradient(circle at top left, rgba(245, 245, 10, 0.14), transparent 24%),
+      linear-gradient(145deg, #080808 0%, #111111 48%, #191919 100%);
 }
-    
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      width: 100%;
-      max-width: 500px; 
-  
-      li {
-        padding: 10px 0;
-        width: 100%;
-        box-sizing: border-box;
-  
-        label {
-          display: block;
-          padding-bottom: 8px;
-          width: 100%;
-          
-        }
-  
-        input {
-          border:solid 2px $secondary-color;
-          background: white;
-          width: 100%;
-          box-sizing: border-box;
-  
-          &.testo {
-            padding: 10px;
-          }
-        }
-      }
-    }
-  
-  
-  
-  .pulsante {
-   
-  @include pulsante;
-    &:hover {
-      background-color:$secondary-color;
-    }
+
+#modulo .content {
+  width: min(100%, 1080px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.terzo #messaggio{
-    width: 100%;
-    max-width: 500px;
-    padding: 10px;
-    box-sizing: border-box;
+
+#modulo h1,
+#modulo h3,
+#modulo .contact-intro {
+  text-align: center;
+  color: $primary-color;
+}
+
+#modulo h1 {
+  margin: 0 0 0.55rem;
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  line-height: 1.05;
+}
+
+#modulo h3 {
+  max-width: 640px;
+  margin: 0 auto 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1.15rem, 2vw, 1.75rem);
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+.contact-intro {
+  max-width: 620px;
+  margin: 0 auto 2.2rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.contact-form {
+  width: min(100%, 1060px);
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid rgba(245, 245, 10, 0.18);
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(27, 27, 27, 0.96) 0%, rgba(15, 15, 15, 0.94) 100%);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.contact-form-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.contact-field,
+.contact-actions {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.subject,
+.terzo,
+.contact-actions {
+  grid-column: 1 / -1;
+}
+
+.contact-field label {
+  display: block;
+  margin-bottom: 0.55rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.contact-form .testo {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.04);
+  color: $primary-color;
+  font: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.42);
   }
- 
-  .quarto .pulsante{
-    width: 150px ;
-    background:$button-color;
+
+  &:hover {
+    border-color: rgba(245, 245, 10, 0.35);
   }
+
+  &:focus {
+    outline: none;
+    border-color: $button-color;
+    box-shadow: 0 0 0 4px rgba(245, 245, 10, 0.2);
+    transform: translateY(-1px);
+  }
+}
+
+.terzo #messaggio {
+  min-height: 170px;
+  resize: vertical;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.4rem;
+}
+
+.quarto button,
+.quarto .pulsante {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 170px;
+  min-height: 56px;
+  padding: 0.95rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f5f50a 0%, #f3c94d 100%);
+  color: #111;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(245, 201, 77, 0.32);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 32px rgba(245, 201, 77, 0.4);
+    filter: brightness(1.02);
+  }
+
+  &:disabled {
+    cursor: wait;
+    opacity: 0.75;
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+.form-status {
+  width: min(100%, 1060px);
+  max-width: 1060px;
+  margin: 1rem auto 0;
+  padding: 0.9rem 1rem;
+  border-radius: 16px;
+  text-align: center;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.form-status.is-pending {
+  color: #7a6500;
+  background: rgba(245, 245, 10, 0.18);
+}
+
+.form-status.is-success {
+  color: #e9fff0;
+  background: rgba(46, 125, 50, 0.45);
+  border: 1px solid rgba(141, 245, 166, 0.28);
+}
+
+.form-status.is-error {
+  color: #8a1f1f;
+  background: rgba(255, 143, 143, 0.2);
+}
 
 .flex {
   margin: 0;
@@ -844,20 +994,34 @@ h1.porfolio{
   ***************************************************/
  
   footer{
+    padding: 24px 16px 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     ul{
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 14px 28px;
       margin: 0 auto;
+      padding: 0;
+      list-style: none;
       font-size: 19px;
-      
+      max-width: 960px;
+    }
+    li {
+      margin: 0;
+      padding: 0;
     }
     a{
+      display: inline-block;
       text-decoration: none;
       color:#ffffff !important;
+      line-height: 1.4;
     }
   }
   .diritti {
     margin: 0 auto;
-    padding: 2px 0;
+    padding: 14px 0 0;
     text-align: center;
   }
   
@@ -869,8 +1033,9 @@ h1.porfolio{
 
 @media (max-width: 768px) {
   footer ul{
-    display: block;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     text-align: center;
     margin: 0 auto;
     padding: 10px 0;
@@ -1057,6 +1222,28 @@ h1.porfolio{
 }
 
 @media (max-width: 480px) {
+  .contact-form {
+    padding: 1.2rem;
+    border-radius: 22px;
+  }
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .primo,
+  .secondo,
+  .subject,
+  .terzo,
+  .contact-actions {
+    grid-column: auto;
+  }
+  .contact-actions {
+    justify-content: stretch;
+  }
+  .quarto button,
+  .quarto .pulsante {
+    width: 100%;
+  }
   p {
     font-size: 16px;
     line-height: 1.7;
